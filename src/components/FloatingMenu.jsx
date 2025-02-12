@@ -1,7 +1,7 @@
 // src/components/FloatingMenu.jsx
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+import { Bars3Icon, XMarkIcon, Cog6ToothIcon, ClockIcon } from '@heroicons/react/24/solid';
 import styles from './FloatingMenu.module.css';
 
 const FloatingMenu = () => {
@@ -10,7 +10,7 @@ const FloatingMenu = () => {
   const navigate = useNavigate();
 
   const handleToggle = () => {
-    setIsOpen((prev) => !prev);
+    setIsOpen(prev => !prev);
   };
 
   const handleClickOutside = (e) => {
@@ -51,9 +51,16 @@ const FloatingMenu = () => {
           className={styles.menuItem}
           onClick={() => handleMenuItemClick('/history')}
         >
-          히스토리
+          <ClockIcon className={styles.menuIcon} />
+          <span className={styles.menuItemText}>히스토리</span>
         </button>
-        {/* 추가 메뉴 항목이 필요하면 여기에 추가 */}
+        <button
+          className={styles.menuItem}
+          onClick={() => handleMenuItemClick('/settings')}
+        >
+          <Cog6ToothIcon className={styles.menuIcon} />
+          <span className={styles.menuItemText}>설정</span>
+        </button>
       </div>
     </div>
   );

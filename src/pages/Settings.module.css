@@ -1,0 +1,52 @@
+/* src/pages/Settings.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: var(--font-family);
+  padding: 1rem;
+  color: #333;
+}
+
+.content {
+  flex-grow: 1;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 버튼들을 한 줄에 배치 */
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 홈 버튼 스타일 */
+.homeButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.homeButton:hover {
+  background-color: var(--primary-color-hover);
+  transform: scale(1.05);
+}
+
+/* 홈 아이콘 스타일 */
+.homeIcon {
+  width: 20px;
+  height: 20px;
+}
