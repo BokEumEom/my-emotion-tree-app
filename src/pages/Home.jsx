@@ -14,7 +14,7 @@ const Home = () => {
   const navigate = useNavigate();
   const [userData] = useLocalStorage('userData', {
     user_id: 'user123',
-    username: 'User123',
+    username: '소란',
     records: [],
     record_count: 0,
     current_tree_stage: '씨앗'

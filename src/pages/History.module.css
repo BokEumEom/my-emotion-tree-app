@@ -9,38 +9,11 @@
   color: #333;
 }
 
-.toggleContainer {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
-.button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 2px solid var(--primary-color);
-  background: none;
-  color: var(--primary-color);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  background: var(--primary-color);
-  color: white;
-}
-
-.activeButton {
-  background: var(--primary-color);
-  color: white;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.emptyMessage {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #888;
+  margin-top: 2rem;
 }
 
 .historyList {
@@ -49,34 +22,36 @@
   gap: 1rem;
 }
 
-.historyCard {
-  background: #ffffff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.historyCard:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.date {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: var(--primary-color);
-}
-
-.recordText {
-  font-size: 1rem;
-  color: #555;
-}
-
-.emptyMessage {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #888;
+/* 홈으로 이동 버튼 컨테이너 */
+.homeButtonContainer {
+  display: flex;
+  justify-content: center;
   margin-top: 2rem;
+}
+
+/* 홈 버튼 스타일 */
+.homeButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.homeButton:hover {
+  background-color: var(--primary-color-hover);
+  transform: scale(1.05);
+}
+
+/* 홈 아이콘 스타일 */
+.homeIcon {
+  width: 20px;
+  height: 20px;
 }
