@@ -25,22 +25,33 @@ const EmotionInput = () => {
 
     const updatedRecords = [...userData.records, newRecord];
     const newCount = updatedRecords.length;
-    const newStage = getTreeStage(newCount);
+    const newStage = getTreeStage(newCount); // 새 기록 수에 따른 단계 계산
 
-    setUserData({
-      ...userData,
-      records: updatedRecords,
-      record_count: newCount,
-      current_tree_stage: newStage
-    });
+    // 만약 현재 단계가 '씨앗'이 아니고(즉, level > 1) 새 기록 수가 현재 단계의 최대치 이상이면,
+    // 단계를 달성한 것으로 간주하여 기록 수를 초기화합니다.
+    if (userData.current_tree_stage !== "씨앗" && newCount >= getTreeStage(newCount).maxRecords) {
+      alert("축하합니다! 단계를 달성했습니다. 기록을 초기화합니다.");
+      setUserData({
+        ...userData,
+        records: updatedRecords,
+        record_count: 0,
+        current_tree_stage: "씨앗"
+      });
+    } else {
+      setUserData({
+        ...userData,
+        records: updatedRecords,
+        record_count: newCount,
+        current_tree_stage: newStage
+      });
+    }
 
-    // 저장 후 홈(대시보드)로 이동
+    // 저장 후 홈 화면으로 이동
     navigate('/');
   };
 
   return (
     <div className={styles.container}>
-      {/* Header에 backLink prop을 전달하면 Header에도 뒤로가기 버튼이 표시됩니다 */}
       <Header title="나의 감정 기록하기" backLink="/" />
       <div className={styles.content}>
         <div className={styles.card}>
@@ -53,9 +64,7 @@ const EmotionInput = () => {
           />
         </div>
       </div>
-      {/* 하단 버튼 영역에 '뒤로가기' 버튼 추가 */}
       <footer className={styles.footer}>
-        <Button onClick={() => navigate(-1)}>뒤로가기</Button>
         <Button onClick={handleSave}>저장하기</Button>
       </footer>
     </div>

@@ -76,7 +76,7 @@ export const treeStages = [
   {
     level: 10,
     minRecords: 17,
-    maxRecords: Infinity,
+    maxRecords: 20,
     name: "전설의 나무",
     message: "전설의 나무! 당신의 기록이 아름답게 빛납니다. 더 많은 잎들이 무성해지고 있어요! 꾸준한 기록이 당신을 더욱 빛나게 합니다. 당신의 나무는 이제 한층 풍성해졌어요. 매일의 기록이 큰 성장을 이루고 있습니다. 계속 기록하세요! 당신의 나무는 앞으로도 멋진 변화를 만들어갈 거예요!",
     image: "/assets/legend_tree.webp"
