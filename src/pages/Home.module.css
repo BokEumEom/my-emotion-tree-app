@@ -1,0 +1,92 @@
+/* 전체 컨테이너 */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #333;
+  font-family: var(--font-family);
+  padding: 1rem;
+}
+
+/* 프로필 및 인삿말 */
+.profileSection {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.profileSection h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.profileSection p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* 메인 콘텐츠 */
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 카드 레이아웃 */
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* 현재 기록 & 주간 기록을 한 줄에 배치 */
+.recordContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1rem;
+}
+
+/* 동일한 크기의 기록 카드 */
+.recordCard {
+  flex: 1;
+}
+
+/* 나무 이미지 영역 */
+.treeContainer {
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* 진행 바 */
+.progressWrapper {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.progressLabel {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* 하단 버튼 */
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+/* 온보딩 버튼 */
+.onboardingBtn {
+  background-color: #ff9800;
+  color: #fff;
+}

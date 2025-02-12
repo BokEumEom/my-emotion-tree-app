@@ -1,0 +1,23 @@
+/* src/components/ProgressBar.module.css */
+.progressContainer {
+  position: relative;
+  height: 12px;
+  background-color: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.5s ease;
+}
+
+.progressText {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  font-size: 0.9rem;
+  color: #333;
+}

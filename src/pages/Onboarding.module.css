@@ -1,0 +1,79 @@
+/* src/pages/Onboarding.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f9ff, #e0f7fa);
+  text-align: center;
+  font-family: var(--font-family);
+}
+
+.slide {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.image {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 0.75rem; /* 기존 1rem에서 줄임 */
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.5rem; /* 기존 2rem에서 줄임 */
+}
+
+.indicatorContainer {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem; /* 기존 1.5rem에서 줄임 */
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  transition: background 0.3s;
+}
+
+.indicator.active {
+  background: #4caf50;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem; /* 기존 1rem에서 줄임 */
+}
+
+.skipButton {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}

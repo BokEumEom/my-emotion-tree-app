@@ -1,0 +1,38 @@
+.card {
+  background: linear-gradient(135deg, #ffffff, #f0f8ff);
+  border: 1px solid #d9e8f5;
+  border-radius: 8px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.icon {
+  font-size: 2rem;
+  color: #6ab04c;
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.cardSubtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 0.75rem;
+}
+
+.cardText {
+  font-size: 1rem;
+  color: #555;
+}

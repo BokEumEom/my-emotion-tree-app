@@ -1,0 +1,62 @@
+/* src/pages/EmotionInput.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  padding: 1rem;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f8ff, #e0f7fa); /* 파스텔 그라데이션 */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.cardTitle {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.noteInput {
+  width: 100%;
+  min-height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noteInput:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(100, 108, 255, 0.5);
+  outline: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}

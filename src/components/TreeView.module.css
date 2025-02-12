@@ -1,0 +1,11 @@
+.treeView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.image {
+  width: 200px;
+  height: auto;
+  transition: transform 0.5s ease;
+}

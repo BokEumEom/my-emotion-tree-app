@@ -1,0 +1,60 @@
+/* src/App.css */
+
+/* 기본 리셋 및 박스 모델 설정 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 전역 폰트 및 배경 설정 */
+body {
+  font-family: var(--font-family);
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* #root 컨테이너: 중앙 정렬과 최대 넓이 지정 */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 로고 관련 전역 스타일 (특정 상황에서 사용) */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* 공통 카드 스타일 (필요 시 전역에서 정의할 수도 있음) */
+.card {
+  padding: 2em;
+}
+
+/* 애니메이션 정의 등 전역 애니메이션 */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
